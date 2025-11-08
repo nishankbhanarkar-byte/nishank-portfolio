@@ -44,7 +44,7 @@ h1{font-size:clamp(28px,5vw,48px);line-height:1.05;margin:.6rem 0}
 .hero-card strong{display:block}
 
 /* Sections */
-section{padding:28px 0}
+section{padding:28px 0; scroll-margin-top:90px}
 h2{font-size:26px;margin:0 0 10px}
 .kicker{color:var(--muted);font-weight:600;margin-bottom:18px}
 .chips{display:flex;gap:10px;flex-wrap:wrap}
@@ -75,6 +75,9 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
   .container{max-width:1000px;padding:0 12px}
   .resume .card{break-inside:avoid}
 }
+  /* Avatar + tweaks */
+.avatar{width:88px;height:88px;border-radius:999px;display:grid;place-items:center;font-weight:800;font-size:28px;color:#fff;background:linear-gradient(135deg,#1e66ff,#6ea8ff);box-shadow:0 8px 24px rgba(30,102,255,.25);margin-bottom:12px}
+.brand strong{font-size:18px}
 
   </style>
 </head>
@@ -94,13 +97,16 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
         <a class=\"ring\" href=\"#contact\">Contact</a>
       </nav>
       <div class="cta">
-        <a class="btn ghost ring" href=\"Nishank_Bhanarkar_Resume.pdf\" download>Download Resume (PDF)</a>
+        <a class=\"btn ghost ring\" href=\"Nishank_Bhanarkar_Resume.pdf\" target=\"_blank\" rel=\"noopener\" download>Download Resume (PDF)</a>
+        <a class="btn ghost ring" href="https://www.linkedin.com/in/nishank-bhanarkar-561337238" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost ring" href="https://github.com/nishankbhanarkar-byte" target="_blank" rel="noopener">GitHub</a>
         <a class="btn primary ring" href="#contact">Hire Me</a>
       </div>
     </div>
   </header>  <main id="home" class="container hero">
     <div class="hero-grid">
       <div>
+        <div class="avatar" role="img" aria-label="Profile photo placeholder">NB</div>
         <span class="tag">Aspiring Software Developer • MSc CA</span>
         <h1>Building clean, useful software with <span style="color:var(--brand)">C/C++/Java/Python</span> and the Web.</h1>
         <p class="lead">I enjoy turning ideas into working products with a focus on readability, performance and a smooth user experience. Currently seeking internships and entry‑level opportunities in Software/Web Development.</p>
@@ -123,17 +129,16 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
     <h2>Skills</h2>
     <p class="kicker">Core technologies & tools</p>
     <div class="chips">
-      <span class="chip">C</span>
-      <span class="chip">C++</span>
-      <span class="chip">Java</span>
-      <span class="chip">Python</span>
-      <span class="chip">HTML</span>
-      <span class="chip">CSS</span>
-      <span class="chip">JavaScript</span>
-      <span class="chip">SQL</span>
-      <span class="chip">Git</span>
-      <span class="chip">MS Office</span>
-      <span class="chip">Excel</span>
+      <span class="chip">💻 C</span>
+      <span class="chip">⚙️ C++</span>
+      <span class="chip">☕ Java</span>
+      <span class="chip">🐍 Python</span>
+      <span class="chip">🌐 HTML</span>
+      <span class="chip">🎨 CSS</span>
+      <span class="chip">🧠 JavaScript</span>
+      <span class="chip">🗄️ SQL</span>
+      <span class="chip">🔧 Git</span>
+      <span class="chip">📊 Excel</span>
     </div>
   </section>  <section id="projects" class="container">
     <h2>Project</h2>
@@ -149,7 +154,7 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
           <li>Focused on usability, accessibility and structured content.</li>
         </ul>
         <div class="cta">
-          <a class="btn ghost" href="#" onclick="alert('Add your GitHub repo link here!');return false;">View Code</a>
+          <a class="btn ghost" href="https://github.com/nishankbhanarkar-byte?tab=repositories" target="_blank" rel="noopener">View Code →</a>
         </div>
       </article>
       <aside class="card">
@@ -272,4 +277,4 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
     secs.forEach(s=>io.observe(s));
     document.getElementById('y').textContent = new Date().getFullYear();
   </script></body>
-                </html>
+      </html>
