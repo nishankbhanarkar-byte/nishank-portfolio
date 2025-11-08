@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nishank Bhanarkar • Software Developer</title>
+  <meta name="description" content="Portfolio of Nishank Bhanarkar – Aspiring Software Developer (MSc CA). Skills: C, C++, Java, Python, HTML, CSS, JavaScript, SQL, Git."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;          /* background */
+      --ink:#0a1a2b;         /* primary text */
+      --muted:#5b708b;       /* secondary text */
+      --brand:#1e66ff;       /* Blue (primary) */
+      --brand-ink:#0f3ea9;   /* darker blue */
+      --chip:#eaf1ff;        /* light blue chip */
+      --card:#f7faff;        /* subtle card */
+      --ring: rgba(30,102,255,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);} 
+    a{color:var(--brand);text-decoration:none}
+    a:hover{color:var(--brand-ink)}
+    .container{max-width:1100px;margin-inline:auto;padding:28px}
+    header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid #eef3ff;z-index:20}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .nav a{font-weight:600;color:var(--ink);padding:10px 12px;border-radius:12px}
+    .nav a.active,.nav a:hover{background:var(--chip)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#1e66ff,#6ea8ff);display:grid;place-items:center;color:#fff;font-weight:800}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;border:1px solid #d8e5ff;border-radius:12px;padding:10px 14px}
+    .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+    .btn.primary:hover{background:var(--brand-ink)}
+    .btn.ghost:hover{border-color:var(--brand)}/* Hero */
+.hero{padding:64px 0}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:8px;background:var(--chip);color:var(--brand-ink);padding:8px 12px;border-radius:999px;font-weight:600}
+h1{font-size:clamp(28px,5vw,48px);line-height:1.05;margin:.6rem 0}
+.lead{font-size:18px;color:var(--muted);max-width:55ch}
+.hero-card{background:var(--card);border:1px solid #e6efff;border-radius:20px;padding:20px}
+.hero-card strong{display:block}
+
+/* Sections */
+section{padding:28px 0}
+h2{font-size:26px;margin:0 0 10px}
+.kicker{color:var(--muted);font-weight:600;margin-bottom:18px}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{background:var(--chip);border:1px solid #d8e5ff;color:var(--brand-ink);padding:8px 12px;border-radius:999px;font-weight:600}
+
+.card{border:1px solid #e6efff;border-radius:18px;padding:18px;background:#fff}
+.grid{display:grid;gap:18px}
+.grid.cols-2{grid-template-columns:1fr 1fr}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
+
+footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
+.socials{display:flex;gap:12px}
+.sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+.ring:focus{outline:none;box-shadow:0 0 0 6px var(--ring)}
+  /* Resume (R2 – Modern Box) */
+.resume{max-width:900px;margin:0 auto}
+.resume .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.resume .card{border:1px solid #e6efff;background:#fff;border-radius:16px;padding:16px}
+.resume h3{margin:.2rem 0 .6rem;font-size:20px}
+.resume ul{margin:.3rem 0 .6rem .9rem}
+.resume .meta{color:var(--muted);font-weight:600}
+.resume-actions{display:flex;gap:10px;margin:12px 0 0}
+@media (max-width:900px){.resume .row{grid-template-columns:1fr}}
+@media print{
+  header, footer, .cta, nav, .links, .resume-actions{display:none !important}
+  body{background:#fff}
+  section{padding:0}
+  .container{max-width:1000px;padding:0 12px}
+  .resume .card{break-inside:avoid}
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">NB</div>
+        <strong>Nishank Bhanarkar</strong>
+      </div>
+      <nav class=\"links\">
+        <a class=\"ring\" href=\"#home\">Home</a>
+        <a class=\"ring\" href=\"#skills\">Skills</a>
+        <a class=\"ring\" href=\"#projects\">Project</a>
+        <a class=\"ring\" href=\"#education\">Education</a>
+        <a class=\"ring\" href=\"#resume\">Resume</a>
+        <a class=\"ring\" href=\"#contact\">Contact</a>
+      </nav>
+      <div class="cta">
+        <a class="btn ghost ring" href="/Nishank_Bhanarkar_Resume.pdf" download>Download Resume (PDF)</a>
+        <a class="btn primary ring" href="#contact">Hire Me</a>
+      </div>
+    </div>
+  </header>  <main id="home" class="container hero">
+    <div class="hero-grid">
+      <div>
+        <span class="tag">Aspiring Software Developer • MSc CA</span>
+        <h1>Building clean, useful software with <span style="color:var(--brand)">C/C++/Java/Python</span> and the Web.</h1>
+        <p class="lead">I enjoy turning ideas into working products with a focus on readability, performance and a smooth user experience. Currently seeking internships and entry‑level opportunities in Software/Web Development.</p>
+        <div class="cta" style="margin-top:16px">
+          <a class="btn primary" href="#projects">See My Work</a>
+          <a class="btn ghost" href="#skills">View Skills</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <strong>Quick Facts</strong>
+        <ul>
+          <li>Location: Pune, Maharashtra, India</li>
+          <li>Degree: MSc in Computer Applications (Year 1)</li>
+          <li>Interests: Software Development, Web Apps, Problem Solving</li>
+          <li>Open to: Internships & freelance projects</li>
+        </ul>
+      </aside>
+    </div>
+  </main>  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <p class="kicker">Core technologies & tools</p>
+    <div class="chips">
+      <span class="chip">C</span>
+      <span class="chip">C++</span>
+      <span class="chip">Java</span>
+      <span class="chip">Python</span>
+      <span class="chip">HTML</span>
+      <span class="chip">CSS</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">SQL</span>
+      <span class="chip">Git</span>
+      <span class="chip">MS Office</span>
+      <span class="chip">Excel</span>
+    </div>
+  </section>  <section id="projects" class="container">
+    <h2>Project</h2>
+    <p class="kicker">Highlighted work</p>
+    <div class="grid cols-2">
+      <article class="card">
+        <h3 style="margin-top:0">E‑Commerce Shoe Website</h3>
+        <p><strong>Role:</strong> UI / Front‑End Developer</p>
+        <p><strong>Stack:</strong> HTML, CSS, JavaScript, SQL</p>
+        <ul>
+          <li>Designed responsive product listings, categories and clean UI layout.</li>
+          <li>Built interactive components and a basic shopping flow.</li>
+          <li>Focused on usability, accessibility and structured content.</li>
+        </ul>
+        <div class="cta">
+          <a class="btn ghost" href="#" onclick="alert('Add your GitHub repo link here!');return false;">View Code</a>
+        </div>
+      </article>
+      <aside class="card">
+        <h3 style="margin-top:0">What I’m learning next</h3>
+        <ul>
+          <li>Java projects with OOP best practices</li>
+          <li>Python scripting & small utilities</li>
+          <li>Modern front‑end frameworks (React basics)</li>
+        </ul>
+      </aside>
+    </div>
+  </section>  <section id=\"education\" class="container">
+    <h2>Education</h2>
+    <div class="card">
+      <p><strong>MSc CA (Pursuing)</strong> — Dr. D. Y. Patil ACS College, Pune (2024–2026)</p>
+      <p><strong>BCA</strong> — Completed</p>
+    </div>
+  </section>  <section id=\"resume\" class=\"container\">
+    <h2>Resume</h2>
+    <p class=\"kicker\">Modern box layout — print or save as PDF</p>
+    <div class=\"resume\">
+      <div class=\"card\" style=\"padding:18px;border-width:2px\">
+        <h1 style=\"margin:.2rem 0\">Nishank Bhanarkar</h1>
+        <p class=\"meta\">Pune, Maharashtra • +91 89752 95303 • nishankbhanarkar@gmail.com</p>
+        <div class=\"resume-actions\">
+          <button class=\"btn primary\" onclick=\"window.print()\">Print / Save as PDF</button>
+        </div>
+      </div>
+      <br/>
+      <div class=\"row\">
+        <div class=\"card\">
+          <h3>Career Objective</h3>
+          <p>To obtain an internship or entry-level role in Software Development where I can apply programming fundamentals and build real-world solutions.</p>
+        </div>
+        <div class=\"card\">
+          <h3>Education</h3>
+          <ul>
+            <li><strong>MSc CA (Pursuing)</strong> — Dr. D. Y. Patil ACS College, Pune (2024–2026)</li>
+            <li><strong>BCA</strong> — Completed</li>
+          </ul>
+        </div>
+      </div>
+      <div class=\"row\">
+        <div class=\"card\">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li><strong>Programming:</strong> C, C++, Java, Python</li>
+            <li><strong>Web:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Database:</strong> SQL</li>
+            <li><strong>Tools:</strong> Git, MS Office, Excel</li>
+          </ul>
+        </div>
+        <div class=\"card\">
+          <h3>Strengths</h3>
+          <ul>
+            <li>Problem Solving</li>
+            <li>Quick Learner</li>
+            <li>Communication Skills</li>
+            <li>Team Collaboration</li>
+          </ul>
+        </div>
+      </div>
+      <div class=\"card\">
+        <h3>Project Experience</h3>
+        <p><strong>E‑Commerce Shoe Website</strong> — <em>UI / Front‑End Developer</em></p>
+        <p class=\"meta\">Stack: HTML, CSS, JavaScript, SQL</p>
+        <ul>
+          <li>Designed responsive product listings, categories and clean UI layout.</li>
+          <li>Built interactive components and a basic shopping workflow.</li>
+          <li>Focused on usability, accessibility and structured content.</li>
+        </ul>
+      </div>
+      <div class=\"card\">
+        <h3>Personal Details</h3>
+        <ul>
+          <li><strong>Languages:</strong> English, Hindi, Marathi</li>
+          <li><strong>Location:</strong> Pune, Maharashtra</li>
+        </ul>
+      </div>
+    </div>
+  </section>  <section id=\"contact\" class="container">
+    <h2>Contact</h2>
+    <p class="kicker">Let’s talk about your project or role</p>
+    <div class="grid cols-2">
+      <div class="card">
+        <p><strong>Email:</strong> <a href="mailto:nishankbhanarkar@gmail.com">nishankbhanarkar@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+918975295303">+91 89752 95303</a></p>
+        <p><strong>Location:</strong> Pune, Maharashtra</p>
+        <div class="socials" aria-label="Social links">
+          <a class="btn ghost" href="#" onclick="alert('Add your LinkedIn profile URL here!');return false;">LinkedIn</a>
+          <a class="btn ghost" href="#" onclick="alert('Add your GitHub URL here!');return false;">GitHub</a>
+        </div>
+      </div>
+      <form class="card" onsubmit="alert('This form uses mailto:. Replace with a backend or form tool if needed.');" action="mailto:nishankbhanarkar@gmail.com" method="post" enctype="text/plain">
+        <label>Name<br><input class="ring" required style="width:100%;padding:10px;border:1px solid #d8e5ff;border-radius:10px" name="Name"></label><br><br>
+        <label>Email<br><input class="ring" required type="email" style="width:100%;padding:10px;border:1px solid #d8e5ff;border-radius:10px" name="Email"></label><br><br>
+        <label>Message<br><textarea class="ring" required rows="4" style="width:100%;padding:10px;border:1px solid #d8e5ff;border-radius:10px" name="Message"></textarea></label><br><br>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <small>© <span id="y"></span> Nishank Bhanarkar. All rights reserved.</small>
+      <small>Built with ❤ in Blue Minimal theme.</small>
+    </div>
+  </footer>  <script>
+    // Active nav link on scroll
+    const links = document.querySelectorAll('header nav a');
+    const secs = [...links].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          const id = '#' + e.target.id;
+          const active = document.querySelector(`header nav a[href='${id}']`);
+          active && active.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-50% 0px -40% 0px'});
+    secs.forEach(s=>io.observe(s));
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script></body>
+        </html>
