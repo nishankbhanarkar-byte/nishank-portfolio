@@ -94,7 +94,7 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
         <a class=\"ring\" href=\"#contact\">Contact</a>
       </nav>
       <div class="cta">
-        <a class="btn ghost ring" href="/Nishank_Bhanarkar_Resume.pdf" download>Download Resume (PDF)</a>
+        <a class="btn ghost ring" href=\"Nishank_Bhanarkar_Resume.pdf\" download>Download Resume (PDF)</a>
         <a class="btn primary ring" href="#contact">Hire Me</a>
       </div>
     </div>
@@ -213,6 +213,66 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
         </div>
       </div>
       <div class=\"card\">
+        <h3>Project Experience</h3>
+        <p><strong>E‑Commerce Shoe Website</strong> — <em>UI / Front‑End Developer</em></p>
+        <p class=\"meta\">Stack: HTML, CSS, JavaScript, SQL</p>
+        <ul>
+          <li>Designed responsive product listings, categories and clean UI layout.</li>
+          <li>Built interactive components and a basic shopping workflow.</li>
+          <li>Focused on usability, accessibility and structured content.</li>
+        </ul>
+      </div>
+      <div class=\"card\">
+        <h3>Personal Details</h3>
+        <ul>
+          <li><strong>Languages:</strong> English, Hindi, Marathi</li>
+          <li><strong>Location:</strong> Pune, Maharashtra</li>
+        </ul>
+      </div>
+    </div>
+  </section>  <section id=\"contact\" class="container">
+    <h2>Contact</h2>
+    <p class="kicker">Let’s talk about your project or role</p>
+    <div class="grid cols-2">
+      <div class="card">
+        <p><strong>Email:</strong> <a href="mailto:nishankbhanarkar@gmail.com">nishankbhanarkar@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+918975295303">+91 89752 95303</a></p>
+        <p><strong>Location:</strong> Pune, Maharashtra</p>
+        <div class="socials" aria-label="Social links">
+          <a class="btn ghost" href="https://www.linkedin.com/in/nishank-bhanarkar-561337238" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/nishankbhanarkar-byte" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <form class="card" onsubmit="alert('This form uses mailto:. Replace with a backend or form tool if needed.');" action="mailto:nishankbhanarkar@gmail.com" method="post" enctype="text/plain">
+        <label>Name<br><input class="ring" required style="width:100%;padding:10px;border:1px solid #d8e5ff;border-radius:10px" name="Name"></label><br><br>
+        <label>Email<br><input class="ring" required type="email" style="width:100%;padding:10px;border:1px solid #d8e5ff;border-radius:10px" name="Email"></label><br><br>
+        <label>Message<br><textarea class="ring" required rows="4" style="width:100%;padding:10px;border:1px solid #d8e5ff;border-radius:10px" name="Message"></textarea></label><br><br>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <small>© <span id="y"></span> Nishank Bhanarkar. All rights reserved.</small>
+      <small>Built with ❤ in Blue Minimal theme.</small>
+    </div>
+  </footer>  <script>
+    // Active nav link on scroll
+    const links = document.querySelectorAll('header nav a');
+    const secs = [...links].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          const id = '#' + e.target.id;
+          const active = document.querySelector(`header nav a[href='${id}']`);
+          active && active.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-50% 0px -40% 0px'});
+    secs.forEach(s=>io.observe(s));
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script></body>
+</html>class=\"card\">
         <h3>Project Experience</h3>
         <p><strong>E‑Commerce Shoe Website</strong> — <em>UI / Front‑End Developer</em></p>
         <p class=\"meta\">Stack: HTML, CSS, JavaScript, SQL</p>
