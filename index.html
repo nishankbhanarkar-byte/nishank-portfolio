@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,18 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#ffffff;          /* background */
-      --ink:#0a1a2b;         /* primary text */
-      --muted:#5b708b;       /* secondary text */
-      --brand:#1e66ff;       /* Blue (primary) */
-      --brand-ink:#0f3ea9;   /* darker blue */
-      --chip:#eaf1ff;        /* light blue chip */
-      --card:#f7faff;        /* subtle card */
-      --ring: rgba(30,102,255,.35);
+      --bg:#ffffff; --ink:#0a1a2b; --muted:#5b708b;
+      --brand:#1e66ff; --brand-ink:#0f3ea9;
+      --chip:#eaf1ff; --card:#f7faff; --ring: rgba(30,102,255,.35);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);} 
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);}
     a{color:var(--brand);text-decoration:none}
     a:hover{color:var(--brand-ink)}
     .container{max-width:1100px;margin-inline:auto;padding:28px}
@@ -34,51 +30,59 @@
     .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;border:1px solid #d8e5ff;border-radius:12px;padding:10px 14px}
     .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
     .btn.primary:hover{background:var(--brand-ink)}
-    .btn.ghost:hover{border-color:var(--brand)}/* Hero */
-.hero{padding:64px 0}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
-.tag{display:inline-flex;align-items:center;gap:8px;background:var(--chip);color:var(--brand-ink);padding:8px 12px;border-radius:999px;font-weight:600}
-h1{font-size:clamp(28px,5vw,48px);line-height:1.05;margin:.6rem 0}
-.lead{font-size:18px;color:var(--muted);max-width:55ch}
-.hero-card{background:var(--card);border:1px solid #e6efff;border-radius:20px;padding:20px}
-.hero-card strong{display:block}
+    .btn.ghost:hover{border-color:var(--brand)}
 
-/* Sections */
-section{padding:28px 0; scroll-margin-top:90px}
-h2{font-size:26px;margin:0 0 10px}
-.kicker{color:var(--muted);font-weight:600;margin-bottom:18px}
-.chips{display:flex;gap:10px;flex-wrap:wrap}
-.chip{background:var(--chip);border:1px solid #d8e5ff;color:var(--brand-ink);padding:8px 12px;border-radius:999px;font-weight:600}
+    /* Hero */
+    .hero{padding:64px 0}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .tag{display:inline-flex;align-items:center;gap:8px;background:var(--chip);color:var(--brand-ink);padding:8px 12px;border-radius:999px;font-weight:600}
+    h1{font-size:clamp(28px,5vw,48px);line-height:1.05;margin:.6rem 0}
+    .lead{font-size:18px;color:var(--muted);max-width:55ch}
+    .hero-card{background:var(--card);border:1px solid #e6efff;border-radius:20px;padding:20px}
+    .hero-card strong{display:block}
 
-.card{border:1px solid #e6efff;border-radius:18px;padding:18px;background:#fff}
-.grid{display:grid;gap:18px}
-.grid.cols-2{grid-template-columns:1fr 1fr}
-@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
+    /* Sections */
+    section{padding:28px 0; scroll-margin-top:90px}
+    h2{font-size:26px;margin:0 0 10px}
+    .kicker{color:var(--muted);font-weight:600;margin-bottom:18px}
+    .chips{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{background:var(--chip);border:1px solid #d8e5ff;color:var(--brand-ink);padding:8px 12px;border-radius:999px;font-weight:600}
 
-footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
-.socials{display:flex;gap:12px}
-.sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-.ring:focus{outline:none;box-shadow:0 0 0 6px var(--ring)}
-  /* Resume (R2 – Modern Box) */
-.resume{max-width:900px;margin:0 auto}
-.resume .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.resume .card{border:1px solid #e6efff;background:#fff;border-radius:16px;padding:16px}
-.resume h3{margin:.2rem 0 .6rem;font-size:20px}
-.resume ul{margin:.3rem 0 .6rem .9rem}
-.resume .meta{color:var(--muted);font-weight:600}
-.resume-actions{display:flex;gap:10px;margin:12px 0 0}
-@media (max-width:900px){.resume .row{grid-template-columns:1fr}}
-@media print{
-  header, footer, .cta, nav, .links, .resume-actions{display:none !important}
-  body{background:#fff}
-  section{padding:0}
-  .container{max-width:1000px;padding:0 12px}
-  .resume .card{break-inside:avoid}
-}
-  /* Avatar + tweaks */
-.avatar{width:88px;height:88px;border-radius:999px;display:grid;place-items:center;font-weight:800;font-size:28px;color:#fff;background:linear-gradient(135deg,#1e66ff,#6ea8ff);box-shadow:0 8px 24px rgba(30,102,255,.25);margin-bottom:12px}
-.brand strong{font-size:18px}
+    .card{border:1px solid #e6efff;border-radius:18px;padding:18px;background:#fff}
+    .grid{display:grid;gap:18px}
+    .grid.cols-2{grid-template-columns:1fr 1fr}
+    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
 
+    footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
+    .socials{display:flex;gap:12px}
+    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    .ring:focus{outline:none;box-shadow:0 0 0 6px var(--ring)}
+
+    /* Avatar (photo + fallback) */
+    .avatar-img{width:88px;height:88px;border-radius:999px;object-fit:cover;box-shadow:0 8px 24px rgba(30,102,255,.25);display:none;margin-bottom:12px}
+    .avatar{width:88px;height:88px;border-radius:999px;display:grid;place-items:center;font-weight:800;font-size:28px;color:#fff;background:linear-gradient(135deg,#1e66ff,#6ea8ff);box-shadow:0 8px 24px rgba(30,102,255,.25);margin-bottom:12px}
+
+    /* Typing cursor */
+    .type{white-space:nowrap;border-right:3px solid var(--brand);animation:blink 1s steps(1) infinite}
+    @keyframes blink{50%{border-color:transparent}}
+
+    /* Resume (R2 – Modern Box) */
+    .resume{max-width:900px;margin:0 auto}
+    .resume .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .resume .card{border:1px solid #e6efff;background:#fff;border-radius:16px;padding:16px}
+    .resume h3{margin:.2rem 0 .6rem;font-size:20px}
+    .resume ul{margin:.3rem 0 .6rem .9rem}
+    .resume .meta{color:var(--muted);font-weight:600}
+    .resume-actions{display:flex;gap:10px;margin:12px 0 0}
+
+    @media (max-width:900px){.resume .row{grid-template-columns:1fr}}
+    @media print{
+      header, footer, .cta, nav, .links, .resume-actions{display:none !important}
+      body{background:#fff}
+      section{padding:0}
+      .container{max-width:1000px;padding:0 12px}
+      .resume .card{break-inside:avoid}
+    }
   </style>
 </head>
 <body>
@@ -88,34 +92,37 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
         <div class="logo" aria-hidden="true">NB</div>
         <strong>Nishank Bhanarkar</strong>
       </div>
-      <nav class=\"links\">
-        <a class=\"ring\" href=\"#home\">Home</a>
-        <a class=\"ring\" href=\"#skills\">Skills</a>
-        <a class=\"ring\" href=\"#projects\">Project</a>
-        <a class=\"ring\" href=\"#education\">Education</a>
-        <a class=\"ring\" href=\"#resume\">Resume</a>
-        <a class=\"ring\" href=\"#contact\">Contact</a>
+      <nav class="links">
+        <a class="ring" href="#home">Home</a>
+        <a class="ring" href="#skills">Skills</a>
+        <a class="ring" href="#projects">Project</a>
+        <a class="ring" href="#education">Education</a>
+        <a class="ring" href="#resume">Resume</a>
+        <a class="ring" href="#contact">Contact</a>
       </nav>
       <div class="cta">
-  <a class="btn ghost ring" href="Nishank_Bhanarkar_Resume.pdf" target="_blank" rel="noopener">
-    View Resume (PDF)
-  </a>
-  <a class="btn ghost ring" href="https://www.linkedin.com/in/nishank-bhanarkar-561337238" target="_blank" rel="noopener">
-    LinkedIn
-  </a>
-  <a class="btn ghost ring" href="https://github.com/nishankbhanarkar-byte" target="_blank" rel="noopener">
-    GitHub
-  </a>
-  <a class="btn primary ring" href="#contact">Hire Me</a>
-</div>
+        <a class="btn ghost ring" href="Nishank_Bhanarkar_Resume.pdf" target="_blank" rel="noopener">
+          View Resume (PDF)
+        </a>
+        <a class="btn ghost ring" href="https://www.linkedin.com/in/nishank-bhanarkar-561337238" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+        <a class="btn ghost ring" href="https://github.com/nishankbhanarkar-byte" target="_blank" rel="noopener">
+          GitHub
+        </a>
+        <a class="btn primary ring" href="#contact">Hire Me</a>
+      </div>
     </div>
-  </header>  <main id="home" class="container hero">
+  </header>
+
+  <main id="home" class="container hero">
     <div class="hero-grid">
       <div>
-        <div class="avatar" role="img" aria-label="Profile photo placeholder">NB</div>
+        <img src="profile.jpg" alt="Nishank Bhanarkar" class="avatar-img" id="avatarImg">
+        <div class="avatar" id="avatarFallback" role="img" aria-label="Profile photo placeholder">NB</div>
         <span class="tag">Aspiring Software Developer • MSc CA</span>
-        <h1>Building clean, useful software with <span style="color:var(--brand)">C/C++/Java/Python</span> and the Web.</h1>
-        <p class="lead">I enjoy turning ideas into working products with a focus on readability, performance and a smooth user experience. Currently seeking internships and entry‑level opportunities in Software/Web Development.</p>
+        <h1>Building clean, useful software with <span id="typing" class="type"></span></h1>
+        <p class="lead">I enjoy turning ideas into working products with a focus on readability, performance and a smooth user experience. Currently seeking internships and entry-level opportunities in Software/Web Development.</p>
         <div class="cta" style="margin-top:16px">
           <a class="btn primary" href="#projects">See My Work</a>
           <a class="btn ghost" href="#skills">View Skills</a>
@@ -131,7 +138,9 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
         </ul>
       </aside>
     </div>
-  </main>  <section id="skills" class="container">
+  </main>
+
+  <section id="skills" class="container">
     <h2>Skills</h2>
     <p class="kicker">Core technologies & tools</p>
     <div class="chips">
@@ -146,13 +155,15 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
       <span class="chip">🔧 Git</span>
       <span class="chip">📊 Excel</span>
     </div>
-  </section>  <section id="projects" class="container">
+  </section>
+
+  <section id="projects" class="container">
     <h2>Project</h2>
     <p class="kicker">Highlighted work</p>
     <div class="grid cols-2">
       <article class="card">
-        <h3 style="margin-top:0">E‑Commerce Shoe Website</h3>
-        <p><strong>Role:</strong> UI / Front‑End Developer</p>
+        <h3 style="margin-top:0">E-Commerce Shoe Website</h3>
+        <p><strong>Role:</strong> UI / Front-End Developer</p>
         <p><strong>Stack:</strong> HTML, CSS, JavaScript, SQL</p>
         <ul>
           <li>Designed responsive product listings, categories and clean UI layout.</li>
@@ -168,34 +179,39 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
         <ul>
           <li>Java projects with OOP best practices</li>
           <li>Python scripting & small utilities</li>
-          <li>Modern front‑end frameworks (React basics)</li>
+          <li>Modern front-end frameworks (React basics)</li>
         </ul>
       </aside>
     </div>
-  </section>  <section id=\"education\" class="container">
+  </section>
+
+  <section id="education" class="container">
     <h2>Education</h2>
     <div class="card">
       <p><strong>MSc CA (Pursuing)</strong> — Dr. D. Y. Patil ACS College, Pune (2024–2026)</p>
       <p><strong>BCA</strong> — Completed</p>
     </div>
-  </section>  <section id=\"resume\" class=\"container\">
+  </section>
+
+  <section id="resume" class="container">
     <h2>Resume</h2>
-    <p class=\"kicker\">Modern box layout — print or save as PDF</p>
-    <div class=\"resume\">
-      <div class=\"card\" style=\"padding:18px;border-width:2px\">
-        <h1 style=\"margin:.2rem 0\">Nishank Bhanarkar</h1>
-        <p class=\"meta\">Pune, Maharashtra • +91 89752 95303 • nishankbhanarkar@gmail.com</p>
-        <div class=\"resume-actions\">
-          <button class=\"btn primary\" onclick=\"window.print()\">Print / Save as PDF</button>
+    <p class="kicker">Modern box layout — print or save as PDF</p>
+    <div class="resume">
+      <div class="card" style="padding:18px;border-width:2px">
+        <h1 style="margin:.2rem 0">Nishank Bhanarkar</h1>
+        <p class="meta">Pune, Maharashtra • +91 89752 95303 • nishankbhanarkar@gmail.com</p>
+        <div class="resume-actions">
+          <a class="btn ghost ring" href="Nishank_Bhanarkar_Resume.pdf" target="_blank" rel="noopener">Open PDF</a>
+          <button class="btn primary" onclick="window.print()">Print / Save as PDF</button>
         </div>
       </div>
       <br/>
-      <div class=\"row\">
-        <div class=\"card\">
+      <div class="row">
+        <div class="card">
           <h3>Career Objective</h3>
           <p>To obtain an internship or entry-level role in Software Development where I can apply programming fundamentals and build real-world solutions.</p>
         </div>
-        <div class=\"card\">
+        <div class="card">
           <h3>Education</h3>
           <ul>
             <li><strong>MSc CA (Pursuing)</strong> — Dr. D. Y. Patil ACS College, Pune (2024–2026)</li>
@@ -203,8 +219,8 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
           </ul>
         </div>
       </div>
-      <div class=\"row\">
-        <div class=\"card\">
+      <div class="row">
+        <div class="card">
           <h3>Technical Skills</h3>
           <ul>
             <li><strong>Programming:</strong> C, C++, Java, Python</li>
@@ -213,7 +229,7 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
             <li><strong>Tools:</strong> Git, MS Office, Excel</li>
           </ul>
         </div>
-        <div class=\"card\">
+        <div class="card">
           <h3>Strengths</h3>
           <ul>
             <li>Problem Solving</li>
@@ -223,17 +239,17 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
           </ul>
         </div>
       </div>
-      <div class=\"card\">
+      <div class="card">
         <h3>Project Experience</h3>
-        <p><strong>E‑Commerce Shoe Website</strong> — <em>UI / Front‑End Developer</em></p>
-        <p class=\"meta\">Stack: HTML, CSS, JavaScript, SQL</p>
+        <p><strong>E-Commerce Shoe Website</strong> — <em>UI / Front-End Developer</em></p>
+        <p class="meta">Stack: HTML, CSS, JavaScript, SQL</p>
         <ul>
           <li>Designed responsive product listings, categories and clean UI layout.</li>
           <li>Built interactive components and a basic shopping workflow.</li>
           <li>Focused on usability, accessibility and structured content.</li>
         </ul>
       </div>
-      <div class=\"card\">
+      <div class="card">
         <h3>Personal Details</h3>
         <ul>
           <li><strong>Languages:</strong> English, Hindi, Marathi</li>
@@ -241,7 +257,9 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
         </ul>
       </div>
     </div>
-  </section>  <section id=\"contact\" class="container">
+  </section>
+
+  <section id="contact" class="container">
     <h2>Contact</h2>
     <p class="kicker">Let’s talk about your project or role</p>
     <div class="grid cols-2">
@@ -261,42 +279,57 @@ footer{border-top:1px solid #eef3ff;padding:32px 0;color:var(--muted)}
         <button class="btn primary" type="submit">Send Message</button>
       </form>
     </div>
-  </section>  <footer>
+  </section>
+
+  <footer>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
       <small>© <span id="y"></span> Nishank Bhanarkar. All rights reserved.</small>
       <small>Built with ❤ in Blue Minimal theme.</small>
     </div>
   </footer>
+
   <script>
-    // Show PDF download only if the file exists
+    // Show real photo if profile.jpg exists
     (async ()=>{
       try{
-        const res = await fetch('Nishank_Bhanarkar_Resume.pdf', {method:'HEAD'});
+        const res = await fetch('profile.jpg', {method:'HEAD'});
         if(res.ok){
-          const btn = document.getElementById('resumeBtn');
-          btn.textContent = 'Download Resume (PDF)';
-          btn.setAttribute('href','Nishank_Bhanarkar_Resume.pdf');
-          btn.setAttribute('target','_blank');
-          btn.setAttribute('rel','noopener');
-          btn.setAttribute('download','');
+          document.getElementById('avatarImg').style.display='block';
+          document.getElementById('avatarFallback').style.display='none';
         }
-      }catch(e){/* ignore */}
-    })();// Active nav link on scroll
-const links = document.querySelectorAll('header nav a');
-const secs = [...links].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      links.forEach(l=>l.classList.remove('active'));
-      const id = '#' + e.target.id;
-      const active = document.querySelector(`header nav a[href='${id}']`);
-      active && active.classList.add('active');
-    }
-  });
-}, {rootMargin:'-50% 0px -40% 0px'});
-secs.forEach(s=>io.observe(s));
-document.getElementById('y').textContent = new Date().getFullYear();
+      }catch(e){}
+    })();
 
+    // Typing animation
+    (function(){
+      const words=["C/C++/Java/Python","HTML/CSS/JavaScript","clean UI & fast code","the Web"];
+      const el=document.getElementById('typing');
+      let wi=0, ci=0, del=false;
+      function tick(){
+        const w=words[wi%words.length];
+        el.textContent=del?w.slice(0,ci--):w.slice(0,++ci);
+        if(!del && ci===w.length){del=true; setTimeout(tick,900); return}
+        if(del && ci===0){del=false; wi++;}
+        setTimeout(tick, del?40:70);
+      }
+      tick();
+    })();
+
+    // Active nav link on scroll
+    const links = document.querySelectorAll('header nav a');
+    const secs = [...links].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          const id = '#' + e.target.id;
+          const active = document.querySelector(`header nav a[href='${id}']`);
+          active && active.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-50% 0px -40% 0px'});
+    secs.forEach(s=>io.observe(s));
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
-</html>
+  </html>
